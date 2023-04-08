@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
+
+</head>
+
+<body>
+
+
+
+
+    <div id="container">
+
+
+        <button type="button" id="sign-out-button" onclick="location.href='/users/sign-out'">Sign Out</button>
+
+        <button type="button" id="reset-password-button" onclick="location.href='/users/reset-password'">Reset
+            Password</button>
+
+    </div>
+
+
+
+    <script>
+            <% if (flash.success && flash.success.length > 0) { %>
+            new Noty({
+                theme: 'relax',
+                text: "<%= flash.success %>",
+                type: 'success',
+                layout: 'topRight',
+                timeout: 1500
+
+            }).show()
+
+
+            <% } %>
+
+    </script>
+</body>
+
+</html>

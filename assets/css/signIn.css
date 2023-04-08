@@ -1,0 +1,51 @@
+/* Style for the heading */
+h1 {
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* Style for the form */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+/* Style for the input fields */
+input[type="email"],
+input[type="password"] {
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 300px;
+    border-radius: 5px;
+    border: none;
+    border: 1px solid #ccc;
+}
+
+/* Style for the submit button */
+input[type="submit"] {
+    padding: 10px;
+    width: 200px;
+    border-radius: 5px;
+    border: none;
+    background-color: #3498db;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Style for the sign up button */
+button {
+    text-align: center;
+    display: block;
+
+    padding: 10px;
+    margin: auto;
+    margin-top: 10px;
+    width: 200px;
+    border-radius: 5px;
+    border: none;
+    background-color: #2ecc71;
+    color: #fff;
+    cursor: pointer;
+}

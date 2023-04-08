@@ -1,0 +1,83 @@
+
+
+
+<html>
+    <head>
+        <link rel="stylesheet" href="/css/signUp.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
+
+    </head>
+
+    <body>
+        
+<h1>Sign Up</h1>
+
+<form action="/users/create" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <input type="password" name="password" placeholder="Password" required>
+    <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+    <input type="submit" value="Sign Up">
+
+</form>
+
+<button type="button" onclick="location.href='/'">Sign In</button>
+
+
+<button type="button" onclick="location.href='/users/auth/google'">Google SignIn</button>
+
+
+
+<script>
+    <% if(flash.success && flash.success.length>0) { %>
+        new Noty({
+            theme:'relax',
+            text:"<%= flash.success %>",
+            type:'success',
+            layout:'topRight',
+            timeout:1500
+
+        }).show()
+
+
+        <% } %>
+
+        <% if(flash.error && flash.error.length>0) { %>
+        new Noty({
+            theme:'relax',
+            text:"<%= flash.error %>",
+            type:'error',
+            layout:'topRight',
+            timeout:1500
+
+        }).show()
+
+
+        <% } %>
+    
+</script>
+
+
+
+
+
+    </body>
+</html>
+
+
+<script src="/js/noty.min.js"></script>
+
+
+    <% if (locals.error) { %>
+      noty({
+        text: '<%= locals.error %>',
+        type: 'error',
+        timeout: 3000
+      });
+    <%} %>
+ 
+  
+
+  
+
